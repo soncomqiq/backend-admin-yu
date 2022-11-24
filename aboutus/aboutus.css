@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bolder;
+
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Kanit', sans-serif;
+    font-size: 20px;
+
+}
+
+/*ส่วนmenubar*/
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border:1px solid rgb(24, 23, 23);*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    color: #CB997E;
+    width: 70px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+    /*border: 1px solid red*/
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #353535;
+    padding: 5px 0;
+    position: relative;
+}
+
+/*animation menu bar*/
+.nav-links li a::after {
+    content: '';
+    background: #CB997E;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    /*underline word*/
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.singup {
+    background: #CB997E;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+p {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 5%;
+}
+
+/*all element*/
+.container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 15%;
+    margin-top: -10%;
+    /*border:1px solid rgb(24, 23, 23);*/
+}
+
+/*card each member*/
+.card {
+    width: 330px;
+    height: 416px;
+    padding: 60px 30px;
+    margin: 50px;
+    background: #F2F3F7;
+    box-shadow: 0.6em 0.6em 1.2em #d2dce9,
+        -0.5em -0.5em 1em #ffffff;
+    border-radius: 20px;
+}
+
+/*จัดรูปแบบในcard*/
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*circle picture*/
+.imgbox {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #FFE8D6;
+}
+
+/*image info*/
+.imgbox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*student ID*/
+.contentBox h4 {
+    color: #353535;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/*student Name*/
+.contentBox h5 {
+    color: #3d5a80;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}

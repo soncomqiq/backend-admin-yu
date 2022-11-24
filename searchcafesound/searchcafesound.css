@@ -1,0 +1,196 @@
+/*ลบขอบต่างๆ*/
+*ิิ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kanit', sans-serif;
+}
+
+ิbody {
+  background-color: #ffffff;
+
+}
+
+/*ส่วนmenubar*/
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*border:1px solid rgb(24, 23, 23);*/
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600px;
+  color: #CB997E;
+  width: 70px;
+  /*border:1px solid red;*/
+
+
+}
+
+/*text logo*/
+h1 {
+  margin-left: 10px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 20px;
+  font-family: 'Kanit';
+  /*border: 1px solid red*/
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #353535;
+  padding: 5px 0;
+  position: relative;
+}
+
+/*animation menu bar*/
+.nav-links li a::after {
+  content: '';
+  background: #CB997E;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  /*underline word*/
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.singup {
+  background: #CB997E;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/*search buttom*/
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  /*border:1px solid rgb(104, 142, 21);*/
+  float: right;
+
+}
+
+.search-buttom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 250px;
+  /*border:1px solid rgb(104, 142, 21);*/
+  float: right;
+  width: 40%
+
+}
+
+/*background search bar */
+.search {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #e3e3e3;
+  /*border:1px solid rgb(15, 21, 0);*/
+}
+
+.search:hover {
+  background: #c9c9c9;
+}
+
+.search i {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #767676;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding-right: 1rem;
+}
+
+.search input::placeholder {
+  color: #767676;
+  font-size: 1rem;
+  font-family: 'Kanit', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Kanit', sans-serif;
+}
+
+/*ภาพรวมรายการของsound*/
+#column {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+/*แต่ละรายการของsound*/
+#column figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(35, 25, 25, 4);
+  margin: (0 2px 15px);
+  padding: 10px;
+  padding-bottom: 5px;
+  transition: .4s ease-in-out;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+}
+
+#column figcaption {
+  font-family: 'Kanit', sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+/*รูปแต่ละรายการ*/
+#column figure img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+#column:hover figure:not(:hover) {
+  opacity: 0.4;
+}
+
+/*footer*/
+p {
+  color: #30343f;
+  text-align: center;
+  font-size: 10px;
+  padding: 5px;
+}

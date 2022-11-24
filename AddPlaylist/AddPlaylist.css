@@ -1,0 +1,235 @@
+*ิ {
+  margin: 0;
+  /* ช่องว่างระหว่างกล่อง */
+  padding: 0;
+  /* ช่องว่างระหว่างเนื้อหาและเส้นขอบ */
+  box-sizing: border-box;
+  /* กำหนดทุก element ให้เป็น border-box โดยทุก element จะกว้างสูงเท่ากัน แม้padding หรือ ขอบ จะไม่เท่ากัน  */
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background-color: beige;
+  /*background-size: cover;
+    background-repeat: no-repeat;*/
+
+
+  color: black;
+  letter-spacing: 1px;
+
+}
+
+footer {
+  text-align: right;
+}
+
+nav {
+  /*ส่วนmenubar*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* กำหนดให้ Flex item มีการดันลงมาด้านล่างตามขนาดของ Flex-Container โดยมีการจัดเรียงจากบนลงล่าง */
+  justify-content: space-between;
+  /* จัด Flex item ให้อยู่ระหว่างกัน */
+
+  /*border:1px solid rgb(24, 23, 23);*/
+
+}
+
+.logo {
+
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 60px;
+  color: #CB997E;
+  width: 100px;
+  /*border:1px solid red;*/
+
+
+}
+
+h1 {
+  margin-left: 10px;
+}
+
+nav .img {
+  width: 60px;
+  margin-right: 10px;
+
+}
+
+.nav-links {
+  margin: auto 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  /* เรียงกันแนวนอนและมีพื้นที่ด้านในตามที่กำหนด */
+  margin: 0 15px;
+  /*border: 1px solid red*/
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #353535;
+  padding: 5px 0;
+  position: relative;
+  font-family: 'Kanit', sans-serif;
+}
+
+.nav-links li a::after {
+  content: '';
+  background: #CB997E;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+
+.logout {
+  background: #CB997E;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+
+
+
+.search {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #e3e3e3;
+}
+
+.search:hover {
+  background: #c9c9c9;
+}
+
+.search i {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #767676;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding-right: 1rem;
+}
+
+.search input::placeholder {
+  color: #767676;
+  font-size: 1rem;
+}
+
+.Yay {
+  border: #CB997E;
+  text-align: center;
+}
+
+label {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+label span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #505f75;
+}
+
+input[type=text] {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+  border: none;
+  width: auto;
+}
+
+input[type=Email] {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  width: auto;
+}
+
+button {
+  background-color: whitesmoke;
+  /* Green */
+  border: black;
+  border-radius: 10px;
+  color: black;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 20px;
+  margin-right: 10px;
+}
+
+button[type="Reset"] {
+  background-color: rgb(208, 74, 74);
+  /* Green */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+button[type="Submit"] {
+  background-color: rgb(20, 170, 20);
+  /* Red */
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.signup {
+  background: #CB997E;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.Sunny {
+  display: flex;
+  justify-content: center;
+}

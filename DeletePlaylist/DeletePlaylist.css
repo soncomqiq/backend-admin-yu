@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  /* ช่องว่างระหว่างกล่อง */
+  padding: 0;
+  /* ช่องว่างระหว่างเนื้อหาและเส้นขอบ */
+  box-sizing: border-box;
+  /* กำหนดทุก element ให้เป็น border-box โดยทุก element จะกว้างสูงเท่ากัน แม้padding หรือ ขอบ จะไม่เท่ากัน  */
+  font-family: 'Kanit', sans-serif;
+}
+
+body {
+  background-color: beige;
+  /*background-size: cover;
+    background-repeat: no-repeat;*/
+
+
+  color: black;
+  letter-spacing: 1px;
+
+}
+
+
+nav {
+  /*ส่วนmenubar*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* กำหนดให้ Flex item มีการดันลงมาด้านล่างตามขนาดของ Flex-Container โดยมีการจัดเรียงจากบนลงล่าง */
+  justify-content: space-between;
+  /* จัด Flex item ให้อยู่ระหว่างกัน */
+
+  /*border:1px solid rgb(24, 23, 23);*/
+
+}
+
+.logo {
+
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 60px;
+  color: #CB997E;
+  width: 100px;
+  /*border:1px solid red;*/
+
+
+}
+
+h2 {
+  margin-left: 10px;
+}
+
+nav .img {
+  width: 60px;
+  margin-right: 10px;
+
+}
+
+.nav-links {
+  margin: auto 0;
+}
+
+.nav-links li {
+  display: inline-block;
+  /* เรียงกันแนวนอนและมีพื้นที่ด้านในตามที่กำหนด */
+  margin: 0 15px;
+  /*border: 1px solid red*/
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #353535;
+  padding: 5px 0;
+  position: relative;
+  font-family: 'Kanit', sans-serif;
+}
+
+.nav-links li a::after {
+  content: '';
+  background: #CB997E;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+
+.logout {
+  background: #CB997E;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #e3e3e3;
+}
+
+.search:hover {
+  background: #c9c9c9;
+}
+
+.search i {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #767676;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  padding-right: 1rem;
+}
+
+.search input::placeholder {
+  color: #767676;
+  font-size: 1rem;
+}
+
+h3{
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Kanit', sans-serif;
+}
+
+#column {
+  column-width: 320px;
+  column-gap: 15px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+#column figure {
+  background: #fefefe;
+  border: 2px solid #fcfcfc;
+  box-shadow: 0 1px 2px rgba(35, 25, 25, 4);
+  margin: (0 2px 15px);
+  padding: 10px;
+  padding-bottom: 5px;
+  transition: .4s ease-in-out;
+  display: inline-block;
+  -webkit-column-break-inside: avoid;
+}
+
+#column p {
+  display: flex;
+  justify-content: right;
+}
+
+#column figure img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 5px;
+}
+
+#column:hover figure:not(:hover) {
+  opacity: 0.4;
+}
+
+.btn-9 {
+  background: rgb(184, 227, 184);
+  font-size: 20px;
+  border-radius: 7px;
+  box-shadow: 0 7px 0px #84d784;
+  /* กำหนดเงา */
+  display: inline-block;
+  transition: all .2s;
+  /* ให้ transition กับทุก property และกำหนดเวลา */
+  position: relative;
+  /*  */
+  padding: 15px 20px;
+  position: relative;
+  /* ทำงานต่อจาก relative ข้างบน โดยจะเป็น padding: 15px 20px; (จะทำงานต่อจากจุดที่อยู่ต่อจากตรงนั้น) */
+  top: 0;
+  cursor: pointer;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.btn-9:active {
+  top: 3px;
+  box-shadow: 0 2px 0px #387796;
+  transition: all .2s;
+}
+
+button {
+  background: None;
+  border: None;
+  position: relative;
+}
+
+#type3 {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px;
+  margin-bottom: 20px;
+}

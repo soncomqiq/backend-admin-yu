@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+.header {
+    height: 100vh;
+    width: 100%;
+    padding: 1%;
+    background: url(https://images.unsplash.com/photo-1438449805896-28a666819a20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*ส่วนmenubar*/
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /*border:1px solid rgb(24, 23, 23);*/
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #CB997E;
+    width: 70px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+    /*border: 1px solid red*/
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    position: relative;
+}
+
+/*animation menu bar*/
+.nav-links li a::after {
+    content: '';
+    background: #CB997E;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    /*underline word*/
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.singup {
+    background: #CB997E;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/*all element*/
+.content {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 90%;
+    /* ยืดหดามขนาดหน้าจอ*/
+    max-width: 900px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    /*border: 1px solid red*/
+}
+
+.content h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    padding-top: 50px;
+}
+
+/*animation under text*/
+.typed-out {
+    display: inline-block;
+    height: 50px;
+    flex-wrap: wrap;
+    /*border: 1px solid red*/
+}
+
+.typingout {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    margin: 0 auto;
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #6B705C;
+    }
+}
+
+/*search button*/
+.content form {
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.content form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+.content form button {
+    background: #CB997E;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/*exemple word search*/
+.category-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* exemple word search*/
+.category {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.categorylist li {
+    border: 2px solid white;
+    padding: 1px 13px;
+    border-radius: 30px;
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+}
+
+.categorylist li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    cursor: pointer;
+}

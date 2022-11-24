@@ -1,0 +1,471 @@
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+/*ส่วนmenubar*/
+nav {
+  /*ส่วนmenubar*/
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /*border:1px solid rgb(24, 23, 23);*/
+}
+
+/*ส่วนmenubar*/
+.header {
+  height: 100vh;
+  width: 100%;
+  padding: 1%;
+
+}
+
+/*logo*/
+.logo {
+
+  display: flex;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 600;
+  color: #CB997E;
+  width: 50px;
+  /*border:1px solid red;*/
+  font-family: 'Kanit', sans-serif;
+
+}
+
+/*ขนาดของ tab bar*/
+nav .img {
+  width: 60px;
+  margin-right: 10px;
+}
+
+/*ตำแหน่งลิงค์แต่ละอัน*/
+.nav-links li {
+  display: inline-block;
+  margin: 0 15px;
+  /*border: 1px solid red*/
+}
+
+/*text*/
+.nav-links li a {
+  text-decoration: none;
+  color: #686763;
+  padding: 5px 0;
+  position: relative;
+}
+
+/*แท็บบาร์แต่ละอันหลังจากเมาส์ไปชี้*/
+.nav-links li a::after {
+  content: '';
+  background: #CB997E;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: width 0.5s;
+}
+
+/*ขนาดแท็กบาร์หลังจากเมาส์ชี้*/
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/*ขนาดหน้าloginจัดให้อยู่ตรงกลาง*/
+.yay {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/*ขนาดหน้าตรงกลาง login*/
+body {
+  max-width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(top, white);
+  font-family: 'Nunito', sans-serif;
+}
+
+/*ปุ่มกด*/
+input,
+button {
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/*property ปุ่ม adminlogin*/
+.adminlogin {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c0101;
+  cursor: pointer;
+
+}
+
+/*ขนาดหน้า formloginและ register*/
+.cont {
+  overflow: hidden;
+  position: relative;
+  width: 900px;
+  height: 550px;
+  background: #fff;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+/*การเปลี่ยนหน้า format สลับไปมาระหว่าง login กับ register*/
+.form {
+  position: relative;
+  width: 640px;
+  height: 100%;
+  padding: 50px 30px;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+/*propertyของp2*/
+h2 {
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+/*propertyของlabel*/
+label {
+  display: block;
+  width: 260px;
+  margin: 25px auto 0;
+  text-align: center;
+}
+
+/*spaceของlabel*/
+label span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #505f75;
+  text-transform: uppercase;
+}
+
+/*propertyของinput*/
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-size: 16px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+/*propertyของ button*/
+button {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 36px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/*propertyของ text_button*/
+.submit {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  background: #CB997E;
+}
+
+.submit a{
+  text-decoration: none;
+  color: rgb(253, 253, 253);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'Nunito', sans-serif;
+}
+
+/*propertyของ text hover หลังกดsubmit*/
+.submit:hover {
+  background: #CB997E;
+}
+
+/*propertyของปุ่ม forget password*/
+.forgot-pass {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0c0101;
+  cursor: pointer;
+}
+
+/*propertyของปุ่ม forget password หลัง mouse ชี้*/
+.forgot-pass:hover {
+  color: red;
+}
+
+/*propertyของแท็บด้านข้าง และการเคลื่อนไหว */
+.sub-cont {
+  font-family: 'Kanit', sans-serif;
+  overflow: hidden;
+  position: absolute;
+  left: 640px;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  padding-left: 260px;
+  background: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+}
+
+/*propertyของแท็บด้านข้าง และการเคลื่อนไหว */
+.cont.s-signup .sub-cont {
+  -webkit-transform: translate3d(-640px, 0, 0);
+  transform: translate3d(-640px, 0, 0);
+}
+
+/*propertyขนาดของรูปภาพด้านข้าง*/
+.img {
+  overflow: hidden;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 260px;
+  height: 100%;
+  padding-top: 360px;
+}
+
+/*propertyของรูปภาพด้านข้าง ก่อนคลิ๊ก (หน้า login)*/
+.img:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 900px;
+  height: 100%;
+  background-image: url(images/image_1.jfif);
+  background-size: cover;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+/*propertyของรูปภาพด้านข้าง หลังคลิ๊ก (หน้า register)*/
+.img:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/*ย้ายต่ำแหน่งหน้าส่วนsign up*/
+.cont.s-signup .img:before {
+  -webkit-transform: translate3d(640px, 0, 0);
+  transform: translate3d(640px, 0, 0);
+}
+
+/*ต่ำแหน่งของtextใน sign up*/
+.img-text {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: -webkit-transform 1.2s ease-in-out;
+  transition: -webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+/*ต่ำแหน่งของtext h2 ใน sign up*/
+.img-text h2 {
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+/*ต่ำแหน่งของtext p ใน sign up*/
+.img-text p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/*ต่ำแหน่งของtext p ใน sign up*/
+.cont.s-signup .img-text.m-up {
+  -webkit-transform: translateX(520px);
+  transform: translateX(520px);
+}
+
+/*ต่ำแหน่งของtext m in ใน sign up*/
+.img-text.m-in {
+  -webkit-transform: translateX(-520px);
+  transform: translateX(-520px);
+}
+
+/*ต่ำแหน่งของtext m in ใน sign up*/
+.cont.s-signup .img-text.m-in {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/*ต่ำแหน่งของtext m in ใน sign in*/
+.sign-in {
+  padding-top: 65px;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+/*ต่ำแหน่งของtext m in ใน sign up*/
+.cont.s-signup .sign-in {
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1.2s;
+  transition-duration: 1.2s;
+  -webkit-transform: translate3d(640px, 0, 0);
+  transform: translate3d(640px, 0, 0);
+}
+
+/*propertyของ text sign in และ sign up*/
+.img-btn {
+  overflow: hidden;
+  z-index: 2;
+  position: relative;
+  width: 100px;
+  height: 36px;
+  margin: 0 auto;
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/*propertyต่ำแหน่ง ของ sign inและ sign up*/
+.img-btn:after {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-radius: 30px;
+}
+
+/*propertyการบ้ายตำแหน่งเวลาเปลี่ยนหน้าระหว่างหน้า register กับ sign in ของ text sign in และ sign up*/
+.img-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1.2s;
+  transition: -webkit-transform 1.2s;
+  transition: transform 1.2s;
+  transition: transform 1.2s, -webkit-transform 1.2s;
+  ;
+}
+
+/*propertyการย้ายตำแหน่งเวลาเปลี่ยนหน้าระหว่างหน้า register กับ sign in ของ text sign in และ sign up*/
+.img-btn span.m-in {
+  -webkit-transform: translateY(-72px);
+  transform: translateY(-72px);
+}
+
+/*propertyการย้ายตำแหน่งเวลาเปลี่ยนหน้าระหว่างหน้า register ของ text sign in */
+.cont.s-signup .img-btn span.m-in {
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/*propertyการย้ายตำแหน่งเวลาเปลี่ยนหน้าระหว่างหน้า register ของ text sign up */
+.cont.s-signup .img-btn span.m-up {
+  -webkit-transform: translateY(72px);
+  transform: translateY(72px);
+}
+
+/*propertyการย้ายตำแหน่งเวลาเปลี่ยนหน้าของsign up */
+.sign-up {
+  -webkit-transform: translate3d(-900px, 0, 0);
+  transform: translate3d(-900px, 0, 0);
+}
+
+/*propertyการย้ายตำแหน่งเวลาเปลี่ยนหน้าของsign up */
+.cont.s-signup .sign-up {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*
+@media screen and (min-width : 354px){
+  nav{
+    flex-direction: row;
+    justify-content: center;
+  }
+  body{
+    flex-direction:;
+  }
+}
+*/
+/*propertyของปุ่มsign up */
+.signup {
+  background: #CB997E;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/*propertyของ content*/
+.content {
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 90%;
+  max-width: 900px;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  /*border: 1px solid red*/
+}
+
+/*propertyต่ำแหน่ง ของ h1(cloundsound) */
+.content h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  padding-top: 50px;
+}
+
+/*ต่ำแหน่งปุ่ม button */
+.adminlogin {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CloudSoundMusic</title>
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv=”content-type” content=”text/html; charset=UTF-8″>
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <!--Menubar-->
+        <nav>
+            <div class="logo">
+                <img src="../image/logo.png" class="logo">
+                <h1>CloudSound</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="yourmodeoftheday.html">Vibes</a></li>
+                <li><a href="aboutus.html">AboutUs</a></li>
+                <li class="singup"><a href="login.html">Sign In</li></a>
+            </ul>
+        </nav>
+
+        <!--all element-->
+        <div class="content">
+            <!--text information-->
+            <h1>Sound Environment to Work and Relax</h1>
+            <div class="typed-out">
+                <div class="typingout">"Unlock your brain w/ advanced space backgrounds & music</div>
+            </div>
+
+            <!--search button-->
+            <form action="yourmodeoftheday.html">
+                <input type="text" placeholder="&#x270e; Try - your mood of the day?">
+                <button type="submit">Search</button>
+            </form>
+            <!-- exemple word search-->
+            <ul class="categorylist">
+                <li><a href="treanding.html">&#x1F525; Trending</a></li>
+                <li><a href="searchcafesound.html">&#9749; Cafe</a></li>
+                <li><a href="searchLibrarysound.html">&#128218; Library</a></li>
+                <li><a href="searchRainsound.html">&#x1F327; Rain</a></li>
+                <li><a href="searchForestsound.html">&#127794; Forest</a></li>
+                <li><a href="searchWaterFallsound.html">&#127754;Waterfall</a></li>
+            </ul>
+        </div>
+        <!--add auto play background music -->
+        <embed src="sound/The Sound of Rain  Sad Piano Song BigRicePiano.mp3" loop="true" autostart="true" width="2"
+            height="0" hidden>
+        <audio controls autoplay hidden>
+            <source src="sound/The Sound of Rain  Sad Piano Song BigRicePiano.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+</body>
+
+</html>
+
+<!-- credit picture: https://unsplash.com/-->
