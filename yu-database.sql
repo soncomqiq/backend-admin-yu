@@ -25,14 +25,14 @@ DROP TABLE IF EXISTS `adminsystem`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `adminsystem` (
-  `No` int DEFAULT NULL,
-  `Username` varchar(50) NOT NULL,
-  `Firstname` varchar(50) DEFAULT NULL,
-  `Lastname` varchar(50) DEFAULT NULL,
-  `Phone` varchar(10) DEFAULT NULL,
-  `Email` varchar(100) DEFAULT NULL,
-  `Password` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Username`)
+                               `No` int DEFAULT NULL,
+                               `Username` varchar(50) NOT NULL,
+                               `Firstname` varchar(50) DEFAULT NULL,
+                               `Lastname` varchar(50) DEFAULT NULL,
+                               `Phone` varchar(10) DEFAULT NULL,
+                               `Email` varchar(100) DEFAULT NULL,
+                               `Password` varchar(50) DEFAULT NULL,
+                               PRIMARY KEY (`Username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -54,14 +54,15 @@ DROP TABLE IF EXISTS `allmusic`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `allmusic` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `Type` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(100) DEFAULT NULL,
-  `CoverUrl` varchar(1000) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+                            `PlaylistID` int NOT NULL AUTO_INCREMENT,
+                            `Type` varchar(100) NOT NULL,
+                            `NamePlaylist` varchar(100) NOT NULL,
+                            `Time` time NOT NULL,
+                            `LinkYoutube` varchar(200) DEFAULT NULL,
+                            `Channel` varchar(100) DEFAULT NULL,
+                            `CoverUrl` varchar(1000) DEFAULT NULL,
+                            PRIMARY KEY (`PlaylistID`)
+) ENGINE=InnoDB AUTO_INCREMENT=2009 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +71,7 @@ CREATE TABLE `allmusic` (
 
 LOCK TABLES `allmusic` WRITE;
 /*!40000 ALTER TABLE `allmusic` DISABLE KEYS */;
-INSERT INTO `allmusic` VALUES ('100','cafe','running away to your own world','04:00:59','https://youtu.be/EOAPMhaCtuw','Cafe Music BGM channel',NULL),('101','cafe','relaxing inspired coffee music','05:02:50','https://youtu.be/IGkdvnuqsIsY','Candy Music Room',NULL),('102','cafe','restaurant ambience','10:00:30','https://youtu.be/h2zkV-l_TbY','myNoise • Focus • Relax • Sleep',NULL),('103','cafe','i will leave you notes under your door','04:07:38','https://youtu.be/K2Q6YO3Ez44','Cafe Music BGM channel',NULL),('104','cafe','busy friday cafe ambience','03:00:23','https://youtu.be/unxrg8UfGx8','Candy Music Room',NULL),('105','cafe','coffee shop sounds','10:00:01','https://youtu.be/0QKdqm5TX6c','EnvironMental',NULL),('106','cafe','winter aid','04:01:11','https://youtu.be/BywDOO99Ia0','Cafe Music BGM channel',NULL),('200','library','Study Jazz - Relaxing Piano Jazz for Study, Work, Reading in Library ASMR','03:18:24','https://youtu.be/mlbZE-0A2EM','Musictag',NULL),('201','library','Hogwarts Library Ambience | Harry potter inspired ASMR','01:00:02','hhttps://youtu.be/oI9bqFUBJ9E','Enchanted ASMR',NULL),('202','library','COZY Rainy Library with Fireplace','08:00:57','https://youtu.be/YQc4WT0yDH4','dreamy sound',NULL),('203','library','Quiet Library Ambience Background Noise for Study | White Noise','04:09:58','https://youtu.be/5TtBW2FnFdk','Winter Whale',NULL),('204','library','You\'re in the Hogwarts Library w/ Harry, Ron & Hermione','01:01:17','https://youtu.be/9dKxKNfVYVs','ASMR Weekly',NULL),('205','library','studying alone at the library at midnight (classical music)','01:01:12','https://youtu.be/aSOXiETcXDw','The Dreamers',NULL),('206','library','Hogwarts Library REMAKE - Animated ambient soundscape cinemagraph','01:00:10','https://youtu.be/pAHciSqi1-8','ASMR rooms',NULL),('300','rain','Reading an old love story in the rain while waiting for your train','00:40:00','https://youtu.be/Adfk3qNAErM','Ivoryyy',NULL),('301','rain','Relaxing Sleep Music + Rain Sounds','10:01:00','https://youtu.be/TFXK3c3SYvU','The Soul of Wind',NULL),('302','rain','Sleep in the tent on a rainy day','08:00:13','https://youtu.be/-N9rb2QDqrw','dreamy sound',NULL),('303','rain','Rain Sound On Window with Thunder Sounds','08:00:13','https://youtu.be/mPZkdNFkNps','Relaxing Ambience ASMR',NULL),('304','rain','Relaxing Sleep Music','03:08:01','https://youtu.be/EBSegrHpreY','The Soul of Wind',NULL),('305','rain','Relaxing Sleep Music with Rain Sounds','10:06:07','https://youtu.be/MYTfTKGSRr8','The Soul of Wind',NULL),('306','rain','It is raining. I will sleep in the car!','08:01:12','https://youtu.be/qJwPrKtHCv0','dreamy sound',NULL),('400','forest','Magic Bookstore in the Woods','02:04:54','https://youtu.be/acsLxmnjMho','The Vault of Ambience',NULL),('401','forest','Forest Sounds | Woodland Ambience, Bird Song','03:00:00','https://youtu.be/xNN7iTA57jM','The Guild of Ambience',NULL),('402','forest','Enchanted Forest - Music & Ambience','02:01:40','https://youtu.be/XxEhuSJF780','The Vault of Ambience',NULL),('403','forest','Birdsong in the Caucasus forest','11:59:58','https://youtu.be/M0AWBnAv8VE','Music Of Nature',NULL),('404','forest','Forest sounds, lyrebirds in Australia ','01:35:00','https://youtu.be/QT7jEGC06vA','ABC Science',NULL),('405','forest','Gentle wind in the mountains','04:00:13','https://youtu.be/iO-mUnSjMKM','Study-Sound-Girl',NULL),('406','forest','Relaxing Meadow with Ambient Nature Sounds','08:03:27','https://youtu.be/ipf7ifVSeDU','Calmed By Nature',NULL),('500','waterfall','Roaring Waterfall White Noise','10:00:38','https://youtu.be/RTYe1MO9-10','Relaxing White Noise',NULL),('501','waterfall','Nature Sounds-Waterfall-Relaxing Meditation W/O Birdsong','08:20:17','https://youtu.be/02NQkhbjALg','johnnielawson',NULL),('502','waterfall','Relaxing Waterfall Sounds for Sleep | Fall Asleep & Stay Sleeping','10:00:00','https://youtu.be/HchoJcYNYlU','Relaxing White Noise',NULL),('503','waterfall','Relaxing River Sounds-Peaceful Forest River','03:00:26','https://youtu.be/IvjMgVS6kng','TheSilentWatcher',NULL),('504','waterfall','The Calming Sound of Water','00:30:12','https://youtu.be/FF2bhR7s3VY','BoydTV',NULL),('505','waterfall','Tropical Waterfall & Audio - relaxing, meditation, nature','10:00:28','https://youtu.be/vemLEwjIxow','Relaxation Windows 4K Nature',NULL),('506','waterfall','Peaceful Waterfall Sounds White Noise for Sleep, Relaxation','10:00:36','https://youtu.be/WwSFmC5FtX0','Relaxing White Noise',NULL),('600','spring','playlist spring has sprung','01:23:00','https://www.youtube.com/watch?v=zSGOF-dnImk','TAKE A LOOK',NULL),('601','spring','morning walks','01:59:18','https://youtu.be/TGan48YE9Us','The Jazz Hop Café',NULL),('602','spring','spring day | a feel good','01:09:01','https://youtu.be/Z6IkH1iapks','Lemon',NULL),('603','spring','flower in spring | warm spring vibes','01:02:26','https://youtu.be/Xay_BqDKR70','LEMON',NULL),('604','spring','The most comfortable and refreshing music that you will wanna listen to from the morning','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),('605','spring','Playlist A pop song that wakes up the love cells','01:01:05','https://youtu.be/qobz9lNDe28','weety Cat',NULL),('606','spring','Western Music','00:42:45','https://youtu.be/4fNIL4-QwrM','meow',NULL),('700','night','sleep is the best meditation','01:00:08',' https://youtu.be/OAx0W0ZI2Uk','The Hanoi Chamomile',NULL),('701','night','goodnight noises everywhere','01:36:45','https://youtu.be/Zkgzg5wK-4A','alexrainbirdMusic',NULL),('702','night','All Night','01:58:49','https://youtu.be/Hc10febKlX8','sunsetdreams',NULL),('703','night','enjoy your night','00:22:59','https://youtu.be/09plQRBWAds','whosme',NULL),('704','night','nice night','00:36:52','https://youtu.be/QCg_MoTrm9Q','may i choose a song for u?',NULL),('705','night','time for yourself','02:17:09','https://youtu.be/Lz0xou5xsSg','alexrainbirdMusic',NULL),('706','night','music is moonlight in the gloomy night of life','02:18:59','https://youtu.be/XS7D_0EIcgs','alexrainbirdMusic',NULL),('800','relaxing','relax english songs','00:32:08','https://youtu.be/USOG2lAzBeQ','kan lnwza',NULL),('801','relaxing','songs to comfort you after an exhausting day','00:49:31','https://youtu.be/O5zmcJTgwtE','Mellow Sounds',NULL),('802','relaxing','good mood vibe relax','00:30:43','https://youtu.be/loL8g6Y5KNgQ','kan lnwza',NULL),('803','relaxing','late morning chill playlist','00:24:20','https://youtu.be/SsPE3H_Upjow','nanas dreams',NULL),('804','relaxing','playlist that makes you comfortable','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),('805','relaxing','Playlist A pop song that wakes up the love cells','00:20:40','https://youtu.be/SqMFN_Bz2Sk','wowrrenjun',NULL),('806','relaxing','you and me','00:32:05','https://youtu.be/HxKwZxF5ifg','Gibong',NULL),('900','working','work hard listen sound harder','00:30:25','https://youtu.be/KigLH_U04oA','Shape of Music',NULL),('901','working','nothing will work unless you do','00:32:08','https://youtu.be/USOG2lAzBeQw','Kan lnwza',NULL),('902','working','keep it going','01:03:37','https://youtu.be/32mYJRUeAOE','Lemon',NULL),('903','working','reflect on all you have done','00:33:29','https://youtu.be/HgeuDIERqjs','Circlemusic',NULL),('904','working','busy friday','00:33:12','https://youtu.be/Ey0F1cnyC70','Circlemusic',NULL),('905','working','conquer you fear','00:53:54','https://youtu.be/hWxFohhGOnM','Saturday Melody',NULL),('906','working','get motivated','01:18:59','https://youtu.be/k-VYl-jw7sQ','Lemon',NULL),('1000','chill','Saturday Nights','00:52:09','https://youtu.be/Gs_RYfATT2Y','Shape of Music',NULL),('1001','chill','keep you happy and motivated','01:03:00','https://youtu.be/mJW57E7GpSo','Lily\'s Corner',NULL),('1002','chill','hug me, it\'s gonna be alright','00:57:36','https://youtu.be/lPKc4NmVd0Q','sunsetdreams',NULL),('1003','chill','chill soft korean songse','00:36:29','https://youtu.be/-Lt1FpeHBTo','beyondthehorizon',NULL),('1004','chill','chill korean r&b','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),('1005','chill','late morning chill playlist','00:24:21','https://youtu.be/SsPE3H_Upjo','nana\'s dreams',NULL),('1006','chill','songs that make your day awesome','00:37:32','https://youtu.be/UB_IV0f6hwU','Mellow Sounds',NULL),('2000','summer','wake up happy','00:52:09','https://youtu.be/Gs_RYfATT2Y','Shape of Music',NULL),('2001','summer','krelaxing time','01:03:00','https://youtu.be/mJW57E7GpSo','Lily\'s Corner',NULL),('2002','summer','sundancing this summer','00:57:36','https://youtu.be/lPKc4NmVd0Q','sunsetdreams',NULL),('2003','summer','a playlist because i miss last summer','00:36:29','https://youtu.be/-Lt1FpeHBTo','beyondthehorizon',NULL),('2004','summer','friends, sun, sand and sea','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),('2005','summer','together, for a summer','00:24:21','https://youtu.be/SsPE3H_Upjo','nana\'s dreams',NULL),('2006','summer','a little happiness everyday','00:37:32','https://youtu.be/UB_IV0f6hwU','Mellow Sounds',NULL);
+INSERT INTO `allmusic` VALUES (100,'cafe','running away to your own world','04:00:59','https://youtu.be/EOAPMhaCtuw','Cafe Music BGM channel',NULL),(101,'cafe','relaxing inspired coffee music','05:02:50','https://youtu.be/IGkdvnuqsIsY','Candy Music Room',NULL),(102,'cafe','restaurant ambience','10:00:30','https://youtu.be/h2zkV-l_TbY','myNoise • Focus • Relax • Sleep',NULL),(103,'cafe','i will leave you notes under your door','04:07:38','https://youtu.be/K2Q6YO3Ez44','Cafe Music BGM channel',NULL),(104,'cafe','busy friday cafe ambience','03:00:23','https://youtu.be/unxrg8UfGx8','Candy Music Room',NULL),(105,'cafe','coffee shop sounds','10:00:01','https://youtu.be/0QKdqm5TX6c','EnvironMental',NULL),(106,'cafe','winter aid','04:01:11','https://youtu.be/BywDOO99Ia0','Cafe Music BGM channel',NULL),(200,'library','Study Jazz - Relaxing Piano Jazz for Study, Work, Reading in Library ASMR','03:18:24','https://youtu.be/mlbZE-0A2EM','Musictag',NULL),(201,'library','Hogwarts Library Ambience | Harry potter inspired ASMR','01:00:02','hhttps://youtu.be/oI9bqFUBJ9E','Enchanted ASMR',NULL),(202,'library','COZY Rainy Library with Fireplace','08:00:57','https://youtu.be/YQc4WT0yDH4','dreamy sound',NULL),(203,'library','Quiet Library Ambience Background Noise for Study | White Noise','04:09:58','https://youtu.be/5TtBW2FnFdk','Winter Whale',NULL),(204,'library','You\'re in the Hogwarts Library w/ Harry, Ron & Hermione','01:01:17','https://youtu.be/9dKxKNfVYVs','ASMR Weekly',NULL),(205,'library','studying alone at the library at midnight (classical music)','01:01:12','https://youtu.be/aSOXiETcXDw','The Dreamers',NULL),(206,'library','Hogwarts Library REMAKE - Animated ambient soundscape cinemagraph','01:00:10','https://youtu.be/pAHciSqi1-8','ASMR rooms',NULL),(300,'rain','Reading an old love story in the rain while waiting for your train','00:40:00','https://youtu.be/Adfk3qNAErM','Ivoryyy',NULL),(301,'rain','Relaxing Sleep Music + Rain Sounds','10:01:00','https://youtu.be/TFXK3c3SYvU','The Soul of Wind',NULL),(302,'rain','Sleep in the tent on a rainy day','08:00:13','https://youtu.be/-N9rb2QDqrw','dreamy sound',NULL),(303,'rain','Rain Sound On Window with Thunder Sounds','08:00:13','https://youtu.be/mPZkdNFkNps','Relaxing Ambience ASMR',NULL),(304,'rain','Relaxing Sleep Music','03:08:01','https://youtu.be/EBSegrHpreY','The Soul of Wind',NULL),(305,'rain','Relaxing Sleep Music with Rain Sounds','10:06:07','https://youtu.be/MYTfTKGSRr8','The Soul of Wind',NULL),(306,'rain','It is raining. I will sleep in the car!','08:01:12','https://youtu.be/qJwPrKtHCv0','dreamy sound',NULL),(400,'forest','Magic Bookstore in the Woods','02:04:54','https://youtu.be/acsLxmnjMho','The Vault of Ambience',NULL),(401,'forest','Forest Sounds | Woodland Ambience, Bird Song','03:00:00','https://youtu.be/xNN7iTA57jM','The Guild of Ambience',NULL),(402,'forest','Enchanted Forest - Music & Ambience','02:01:40','https://youtu.be/XxEhuSJF780','The Vault of Ambience',NULL),(403,'forest','Birdsong in the Caucasus forest','11:59:58','https://youtu.be/M0AWBnAv8VE','Music Of Nature',NULL),(404,'forest','Forest sounds, lyrebirds in Australia ','01:35:00','https://youtu.be/QT7jEGC06vA','ABC Science',NULL),(405,'forest','Gentle wind in the mountains','04:00:13','https://youtu.be/iO-mUnSjMKM','Study-Sound-Girl',NULL),(406,'forest','Relaxing Meadow with Ambient Nature Sounds','08:03:27','https://youtu.be/ipf7ifVSeDU','Calmed By Nature',NULL),(500,'waterfall','Roaring Waterfall White Noise','10:00:38','https://youtu.be/RTYe1MO9-10','Relaxing White Noise',NULL),(501,'waterfall','Nature Sounds-Waterfall-Relaxing Meditation W/O Birdsong','08:20:17','https://youtu.be/02NQkhbjALg','johnnielawson',NULL),(502,'waterfall','Relaxing Waterfall Sounds for Sleep | Fall Asleep & Stay Sleeping','10:00:00','https://youtu.be/HchoJcYNYlU','Relaxing White Noise',NULL),(503,'waterfall','Relaxing River Sounds-Peaceful Forest River','03:00:26','https://youtu.be/IvjMgVS6kng','TheSilentWatcher',NULL),(504,'waterfall','The Calming Sound of Water','00:30:12','https://youtu.be/FF2bhR7s3VY','BoydTV',NULL),(505,'waterfall','Tropical Waterfall & Audio - relaxing, meditation, nature','10:00:28','https://youtu.be/vemLEwjIxow','Relaxation Windows 4K Nature',NULL),(506,'waterfall','Peaceful Waterfall Sounds White Noise for Sleep, Relaxation','10:00:36','https://youtu.be/WwSFmC5FtX0','Relaxing White Noise',NULL),(600,'spring','playlist spring has sprung','01:23:00','https://www.youtube.com/watch?v=zSGOF-dnImk','TAKE A LOOK',NULL),(601,'spring','morning walks','01:59:18','https://youtu.be/TGan48YE9Us','The Jazz Hop Café',NULL),(602,'spring','spring day | a feel good','01:09:01','https://youtu.be/Z6IkH1iapks','Lemon',NULL),(603,'spring','flower in spring | warm spring vibes','01:02:26','https://youtu.be/Xay_BqDKR70','LEMON',NULL),(604,'spring','The most comfortable and refreshing music that you will wanna listen to from the morning','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),(605,'spring','Playlist A pop song that wakes up the love cells','01:01:05','https://youtu.be/qobz9lNDe28','weety Cat',NULL),(606,'spring','Western Music','00:42:45','https://youtu.be/4fNIL4-QwrM','meow',NULL),(700,'night','sleep is the best meditation','01:00:08',' https://youtu.be/OAx0W0ZI2Uk','The Hanoi Chamomile',NULL),(701,'night','goodnight noises everywhere','01:36:45','https://youtu.be/Zkgzg5wK-4A','alexrainbirdMusic',NULL),(702,'night','All Night','01:58:49','https://youtu.be/Hc10febKlX8','sunsetdreams',NULL),(703,'night','enjoy your night','00:22:59','https://youtu.be/09plQRBWAds','whosme',NULL),(704,'night','nice night','00:36:52','https://youtu.be/QCg_MoTrm9Q','may i choose a song for u?',NULL),(705,'night','time for yourself','02:17:09','https://youtu.be/Lz0xou5xsSg','alexrainbirdMusic',NULL),(706,'night','music is moonlight in the gloomy night of life','02:18:59','https://youtu.be/XS7D_0EIcgs','alexrainbirdMusic',NULL),(800,'relaxing','relax english songs','00:32:08','https://youtu.be/USOG2lAzBeQ','kan lnwza',NULL),(801,'relaxing','songs to comfort you after an exhausting day','00:49:31','https://youtu.be/O5zmcJTgwtE','Mellow Sounds',NULL),(802,'relaxing','good mood vibe relax','00:30:43','https://youtu.be/loL8g6Y5KNgQ','kan lnwza',NULL),(803,'relaxing','late morning chill playlist','00:24:20','https://youtu.be/SsPE3H_Upjow','nanas dreams',NULL),(804,'relaxing','playlist that makes you comfortable','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),(805,'relaxing','Playlist A pop song that wakes up the love cells','00:20:40','https://youtu.be/SqMFN_Bz2Sk','wowrrenjun',NULL),(806,'relaxing','you and me','00:32:05','https://youtu.be/HxKwZxF5ifg','Gibong',NULL),(900,'working','work hard listen sound harder','00:30:25','https://youtu.be/KigLH_U04oA','Shape of Music',NULL),(901,'working','nothing will work unless you do','00:32:08','https://youtu.be/USOG2lAzBeQw','Kan lnwza',NULL),(902,'working','keep it going','01:03:37','https://youtu.be/32mYJRUeAOE','Lemon',NULL),(903,'working','reflect on all you have done','00:33:29','https://youtu.be/HgeuDIERqjs','Circlemusic',NULL),(904,'working','busy friday','00:33:12','https://youtu.be/Ey0F1cnyC70','Circlemusic',NULL),(905,'working','conquer you fear','00:53:54','https://youtu.be/hWxFohhGOnM','Saturday Melody',NULL),(906,'working','get motivated','01:18:59','https://youtu.be/k-VYl-jw7sQ','Lemon',NULL),(1000,'chill','Saturday Nights','00:52:09','https://youtu.be/Gs_RYfATT2Y','Shape of Music',NULL),(1001,'chill','keep you happy and motivated','01:03:00','https://youtu.be/mJW57E7GpSo','Lily\'s Corner',NULL),(1002,'chill','hug me, it\'s gonna be alright','00:57:36','https://youtu.be/lPKc4NmVd0Q','sunsetdreams',NULL),(1003,'chill','chill soft korean songse','00:36:29','https://youtu.be/-Lt1FpeHBTo','beyondthehorizon',NULL),(1004,'chill','chill korean r&b','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),(1005,'chill','late morning chill playlist','00:24:21','https://youtu.be/SsPE3H_Upjo','nana\'s dreams',NULL),(1006,'chill','songs that make your day awesome','00:37:32','https://youtu.be/UB_IV0f6hwU','Mellow Sounds',NULL),(2000,'summer','wake up happy','00:52:09','https://youtu.be/Gs_RYfATT2Y','Shape of Music',NULL),(2001,'summer','krelaxing time','01:03:00','https://youtu.be/mJW57E7GpSo','Lily\'s Corner',NULL),(2002,'summer','sundancing this summer','00:57:36','https://youtu.be/lPKc4NmVd0Q','sunsetdreams',NULL),(2003,'summer','a playlist because i miss last summer','00:36:29','https://youtu.be/-Lt1FpeHBTo','beyondthehorizon',NULL),(2004,'summer','friends, sun, sand and sea','00:56:01','https://youtu.be/I0q6kNC6jqM','wutoji',NULL),(2005,'summer','together, for a summer','00:24:21','https://youtu.be/SsPE3H_Upjo','nana\'s dreams',NULL),(2006,'summer','a little happiness everyday','00:37:32','https://youtu.be/UB_IV0f6hwU','Mellow Sounds',NULL),(2008,'Summer55566666666','testName','00:37:32','LinkYoutube','Channel','CoverUrl');
 /*!40000 ALTER TABLE `allmusic` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -82,11 +83,11 @@ DROP TABLE IF EXISTS `cafe`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cafe` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL
+                        `PlaylistID` varchar(100) NOT NULL,
+                        `NamePlaylist` varchar(100) NOT NULL,
+                        `Time` time NOT NULL,
+                        `LinkYoutube` varchar(200) DEFAULT NULL,
+                        `Channel` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -108,13 +109,13 @@ DROP TABLE IF EXISTS `chill`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `chill` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Mood` varchar(20) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL,
-  `Month` varchar(20) NOT NULL
+                         `PlaylistID` varchar(100) NOT NULL,
+                         `NamePlaylist` varchar(100) NOT NULL,
+                         `Mood` varchar(20) NOT NULL,
+                         `Time` time NOT NULL,
+                         `LinkYoutube` varchar(200) DEFAULT NULL,
+                         `Channel` varchar(50) DEFAULT NULL,
+                         `Month` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -188,10 +189,10 @@ DROP TABLE IF EXISTS `login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `login` (
-  `Email` varchar(100) NOT NULL,
-  `Username` varchar(50) DEFAULT NULL,
-  `Password` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`Email`)
+                         `Email` varchar(100) NOT NULL,
+                         `Username` varchar(50) DEFAULT NULL,
+                         `Password` varchar(50) DEFAULT NULL,
+                         PRIMARY KEY (`Email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -213,13 +214,13 @@ DROP TABLE IF EXISTS `night`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `night` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Mood` varchar(20) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL,
-  `Month` varchar(20) NOT NULL
+                         `PlaylistID` varchar(100) NOT NULL,
+                         `NamePlaylist` varchar(100) NOT NULL,
+                         `Mood` varchar(20) NOT NULL,
+                         `Time` time NOT NULL,
+                         `LinkYoutube` varchar(200) DEFAULT NULL,
+                         `Channel` varchar(50) DEFAULT NULL,
+                         `Month` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -241,11 +242,11 @@ DROP TABLE IF EXISTS `rain`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `rain` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL
+                        `PlaylistID` varchar(100) NOT NULL,
+                        `NamePlaylist` varchar(100) NOT NULL,
+                        `Time` time NOT NULL,
+                        `LinkYoutube` varchar(200) DEFAULT NULL,
+                        `Channel` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -267,13 +268,13 @@ DROP TABLE IF EXISTS `relaxing`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `relaxing` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Mood` varchar(20) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL,
-  `Month` varchar(20) NOT NULL
+                            `PlaylistID` varchar(100) NOT NULL,
+                            `NamePlaylist` varchar(100) NOT NULL,
+                            `Mood` varchar(20) NOT NULL,
+                            `Time` time NOT NULL,
+                            `LinkYoutube` varchar(200) DEFAULT NULL,
+                            `Channel` varchar(50) DEFAULT NULL,
+                            `Month` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -295,13 +296,13 @@ DROP TABLE IF EXISTS `spring`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `spring` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Mood` varchar(20) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL,
-  `Month` varchar(20) NOT NULL
+                          `PlaylistID` varchar(100) NOT NULL,
+                          `NamePlaylist` varchar(100) NOT NULL,
+                          `Mood` varchar(20) NOT NULL,
+                          `Time` time NOT NULL,
+                          `LinkYoutube` varchar(200) DEFAULT NULL,
+                          `Channel` varchar(50) DEFAULT NULL,
+                          `Month` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -323,11 +324,11 @@ DROP TABLE IF EXISTS `waterfall`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `waterfall` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL
+                             `PlaylistID` varchar(100) NOT NULL,
+                             `NamePlaylist` varchar(100) NOT NULL,
+                             `Time` time NOT NULL,
+                             `LinkYoutube` varchar(200) DEFAULT NULL,
+                             `Channel` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -349,13 +350,13 @@ DROP TABLE IF EXISTS `working`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `working` (
-  `PlaylistID` varchar(100) NOT NULL,
-  `NamePlaylist` varchar(100) NOT NULL,
-  `Mood` varchar(20) NOT NULL,
-  `Time` time NOT NULL,
-  `LinkYoutube` varchar(200) DEFAULT NULL,
-  `Channel` varchar(50) DEFAULT NULL,
-  `Month` varchar(20) NOT NULL
+                           `PlaylistID` varchar(100) NOT NULL,
+                           `NamePlaylist` varchar(100) NOT NULL,
+                           `Mood` varchar(20) NOT NULL,
+                           `Time` time NOT NULL,
+                           `LinkYoutube` varchar(200) DEFAULT NULL,
+                           `Channel` varchar(50) DEFAULT NULL,
+                           `Month` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -378,4 +379,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-25 23:58:06
+-- Dump completed on 2022-11-26  0:26:51
