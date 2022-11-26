@@ -104,11 +104,11 @@ router.get("/list", authenticateToken, (req, res) => {
   if (q && by) {
     database.query(`select *
                     from adminsystem
-                    where ${by} LIKE "%${q}%"`, (err, rows) => {
+                    where ${by} LIKE "%${q}%" order by No`, (err, rows) => {
       res.send(rows)
     })
   } else {
-    database.query("select * from adminsystem", (err, rows) => {
+    database.query("select * from adminsystem order by No", (err, rows) => {
       res.send(rows)
     })
   }
