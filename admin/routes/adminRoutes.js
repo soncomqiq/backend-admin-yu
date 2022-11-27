@@ -23,6 +23,7 @@ router.post("/login", (req, res) => {
 
 router.put("/song/:id", authenticateToken, (req, res) => {
   const songId = req.params.id;
+  const PlaylistID = req.body.PlaylistID;
   const Type = req.body.Type;
   const NamePlaylist = req.body.NamePlaylist;
   const Time = req.body.Time;
@@ -31,12 +32,13 @@ router.put("/song/:id", authenticateToken, (req, res) => {
   const LinkPicture = req.body.LinkPicture;
 
   database.query(`UPDATE \`project\`.\`allmusic\`
-                  SET \`Type\`         = '${Type}',
+                  SET \`PlaylistID\`   = '${PlaylistID}',
+                      \`Type\`         = '${Type}',
                       \`NamePlaylist\` = '${NamePlaylist}',
                       \`Time\`         = '${Time}',
                       \`LinkYoutube\`  = '${LinkYoutube}',
                       \`Channel\`      = '${Channel}',
-                      \`LinkPicture\`     = '${LinkPicture}'
+                      \`LinkPicture\`  = '${LinkPicture}'
                   WHERE (\`PlaylistID\` = '${songId}');`, (err, rows) => {
     if (err) {
       console.log(err)
@@ -49,15 +51,18 @@ router.put("/song/:id", authenticateToken, (req, res) => {
 
 router.post("/song", authenticateToken, (req, res) => {
   const Type = req.body.Type;
+  const PlaylistID = req.body.PlaylistID;
   const NamePlaylist = req.body.NamePlaylist;
   const Time = req.body.Time;
   const LinkYoutube = req.body.LinkYoutube;
   const Channel = req.body.Channel;
   const LinkPicture = req.body.LinkPicture;
 
-  database.query(`INSERT INTO \`allmusic\` (\`Type\`, \`NamePlaylist\`, \`Time\`, \`LinkYoutube\`, \`Channel\`,
+  database.query(`INSERT INTO \`allmusic\` (\`PlaylistID\`, \`Type\`, \`NamePlaylist\`, \`Time\`, \`LinkYoutube\`,
+                                            \`Channel\`,
                                             \`LinkPicture\`)
-                  VALUES ('${Type}', '${NamePlaylist}', '${Time}', '${LinkYoutube}', '${Channel}', '${LinkPicture}
+                  VALUES ('${PlaylistID}', '${Type}', '${NamePlaylist}', '${Time}', '${LinkYoutube}', '${Channel}',
+                          '${LinkPicture}
                           ');`, (err, rows) => {
     if (err) {
       console.log(err)
@@ -104,7 +109,8 @@ router.get("/list", authenticateToken, (req, res) => {
   if (q && by) {
     database.query(`select *
                     from adminsystem
-                    where ${by} LIKE "%${q}%" order by No`, (err, rows) => {
+                    where ${by} LIKE "%${q}%"
+                    order by No`, (err, rows) => {
       res.send(rows)
     })
   } else {
