@@ -28,7 +28,7 @@ router.put("/song/:id", authenticateToken, (req, res) => {
   const Time = req.body.Time;
   const LinkYoutube = req.body.LinkYoutube;
   const Channel = req.body.Channel;
-  const CoverUrl = req.body.CoverUrl;
+  const LinkPicture = req.body.LinkPicture;
 
   database.query(`UPDATE \`project\`.\`allmusic\`
                   SET \`Type\`         = '${Type}',
@@ -36,7 +36,7 @@ router.put("/song/:id", authenticateToken, (req, res) => {
                       \`Time\`         = '${Time}',
                       \`LinkYoutube\`  = '${LinkYoutube}',
                       \`Channel\`      = '${Channel}',
-                      \`LinkPicture\`     = '${CoverUrl}'
+                      \`LinkPicture\`     = '${LinkPicture}'
                   WHERE (\`PlaylistID\` = '${songId}');`, (err, rows) => {
     if (err) {
       console.log(err)
@@ -53,11 +53,11 @@ router.post("/song", authenticateToken, (req, res) => {
   const Time = req.body.Time;
   const LinkYoutube = req.body.LinkYoutube;
   const Channel = req.body.Channel;
-  const CoverUrl = req.body.CoverUrl;
+  const LinkPicture = req.body.LinkPicture;
 
   database.query(`INSERT INTO \`allmusic\` (\`Type\`, \`NamePlaylist\`, \`Time\`, \`LinkYoutube\`, \`Channel\`,
                                             \`LinkPicture\`)
-                  VALUES ('${Type}', '${NamePlaylist}', '${Time}', '${LinkYoutube}', '${Channel}', '${CoverUrl}
+                  VALUES ('${Type}', '${NamePlaylist}', '${Time}', '${LinkYoutube}', '${Channel}', '${LinkPicture}
                           ');`, (err, rows) => {
     if (err) {
       console.log(err)
