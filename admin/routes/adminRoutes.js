@@ -36,7 +36,7 @@ router.put("/song/:id", authenticateToken, (req, res) => {
                       \`Time\`         = '${Time}',
                       \`LinkYoutube\`  = '${LinkYoutube}',
                       \`Channel\`      = '${Channel}',
-                      \`CoverUrl\`     = '${CoverUrl}'
+                      \`LinkPicture\`     = '${CoverUrl}'
                   WHERE (\`PlaylistID\` = '${songId}');`, (err, rows) => {
     if (err) {
       console.log(err)
@@ -56,7 +56,7 @@ router.post("/song", authenticateToken, (req, res) => {
   const CoverUrl = req.body.CoverUrl;
 
   database.query(`INSERT INTO \`allmusic\` (\`Type\`, \`NamePlaylist\`, \`Time\`, \`LinkYoutube\`, \`Channel\`,
-                                            \`CoverUrl\`)
+                                            \`LinkPicture\`)
                   VALUES ('${Type}', '${NamePlaylist}', '${Time}', '${LinkYoutube}', '${Channel}', '${CoverUrl}
                           ');`, (err, rows) => {
     if (err) {
